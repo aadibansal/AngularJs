@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="todoApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="todo.js"></script>
+	<title>Todo Application</title>
+  </head>
+  <body>
+    <h2>Ypur Personal Todo Application</h2>
+    <div ng-controller="TodoListController as todo">
+	  <form ng-submit="todo.addTodo()">
+        <input type="text" ng-model="todo.todoText"
+               placeholder="add todo here">
+        <input type="submit" value="Add">
+      </form>
+	  <ul>
+        <li ng-repeat="todo in todo.todos">
+          <label ng-bind = todo></label>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
