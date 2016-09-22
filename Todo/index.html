@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="todoApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="todo.js"></script>
+	<title>Todo Application</title>
+  </head>
+  <body>
+    <h2>Your Personal Todo Application</h2>
+    <div ng-controller="TodoListController as todo" class="well">
+	  <form ng-submit="todo.addTodo()">
+        <input type="text" ng-model="todo.todoText" placeholder="Add todo here">
+        <input type="submit" value="Add">
+      </form>
+	  <ul>
+        <li ng-repeat="tod in todo.todos track by $index">
+          <label ng-bind = tod></label>&nbsp; <a href ng-click='todo.todos.splice($index,1)'><span class="glyphicon glyphicon-remove"></span></a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

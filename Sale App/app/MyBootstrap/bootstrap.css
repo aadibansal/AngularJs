@@ -1,0 +1,218 @@
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+.navbar-default {
+    background-color: #fff;
+    border-color: #eeeeee;
+}
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+}
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #eeeeee;
+}
+.navbar-default .navbar-header .navbar-toggle {
+    margin-top: 7px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'PT Sans Caption', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+.navbar-default .navbar-header .navbar-brand {
+    font-family: 'PT Sans Caption', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+.navbar-toggle {
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.navbar-default .navbar-brand {
+    color: #777;
+}
+.navbar-brand {
+    float: left;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 50px;
+}
+a {
+    color: #b84d45;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+}
+.nav>li {
+    position: relative;
+    display: block;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+.navbar-default .navbar-header .navbar-toggle i {
+    margin-right: 2px;
+    font-size: 10px;
+}
+section.themes {
+     padding: 50px 0; 
+}
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.preview-panel {
+    text-align: center;
+    background-color: #f5f5f5;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    border-bottom: 3px solid #eeeeee;
+    position: relative;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a {
+    color: #b84d45;
+    text-decoration: none;
+}
+a {
+    background-color: transparent;
+}	
+.preview-panel a img {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+img {
+    vertical-align: middle;
+}
+.preview-panel .preview-panel-content {
+    padding: 30px 15px;
+}
+.badge-new {
+    color: black;
+    font-size: 14px;
+    line-height: 28px;
+    top: -6px;
+    right: -10px;
+    font-family: 'Patrick Hand SC';
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background: #FCD670;
+    border-bottom: 2px solid #fac125;
+    border-radius: 100%;
+    -ms-transform: rotate(-12deg);
+    -webkit-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+    text-transform: none;
+}
+.preview-panel .preview-panel-content h4 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+}	
+.preview-panel .preview-panel-content p {
+    margin: 15px 0;
+}
+.preview-panel .preview-panel-content .btn {
+    font-size: 11px;
+    border-color: #eeeeee;
+}
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.btn {
+    font-size: 14px;
+    border: 0;
+    border-bottom: 3px solid;
+    text-transform: uppercase;
+    font-family: 'PT Sans Caption', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+footer .footer-main {
+    text-align: center;
+    padding: 50px 0;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}

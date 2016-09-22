@@ -1,0 +1,97 @@
+<!doctype html>
+<html ng-app="fromApp">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<script src="controller.js"></script>
+	<title>Form</title>
+</head>
+<body>
+	<h1> For Processing In Application Do Register/Login</h1>
+	<div class="well" ng-controller="formController as form">
+		<div ng-if = "form.successful">
+			<h1>Welcome in Application <button type="button" class="btn btn-default" ng-click="form.successful = !form.successful; form.registerUser='';form.loginUser=''" style="margin-left:869px">LogOut</button></h1>
+			<button type="button" class="btn btn-default" ng-click="form.successful = !form.successful; form.registerUser='';form.loginUser=''">Add More user</button>
+		</div>
+		<div ng-if = "!form.successful">
+		<div>
+			<button class="btn btn-success" ng-click="form.register=1; form.login=0">Register</button>
+			<button class="btn btn-success" ng-click="form.login=1; form.register=0; form.chec = false">Login</button>
+		</div>
+		<div ng-show="form.login">
+		<h3>Login Form</h3>
+			<h4 class="alert alert-danger" ng-show = "form.chec">Either Passowrd or Username is wrong.</h1>
+			<form class="form-horizontal" name="loginForm"  ng-submit="form.check()" novalidate>
+				<div class="form-group">
+				  <label class="control-label col-sm-2">Email</label>
+				  <div class="col-sm-10">
+					<input type="email" class="form-control" name="email" placeholder="Enter UserName" ng-model="form.loginUser.userName">
+					<span ng-show="loginForm.email.$error.email" ng-model ="errorCheck" style="color: red">Please Enter Valid email address</span>
+				 </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2">Password</label>
+				  <div class="col-sm-10">
+					<input type="password" class="form-control" placeholder="Enter Password" name="password" ng-model="form.loginUser.password" ng-minlength="4" required>
+					<span ng-show="loginForm.password.$error.minlength" style="color: red">Your password must be at least 4 characters.</span>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default" ng-disabled="loginForm.$invalid">Log In</button>
+				  </div>
+				</div>
+			</form>
+		</div>
+		<div ng-show="form.register">
+		<h3> Register Form</h3>
+			<form class="form-horizontal" name="registerForm"  ng-submit="form.save()" novalidate>
+				<div class="form-group">
+				  <label class="control-label col-sm-2">FirstName*</label>
+				  <div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Enter First Name" ng-model="form.registerUser.firstName" required>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2">SurName*</label>
+				  <div class="col-sm-10">
+					<input type="text" class="form-control" placeholder="Enter Sur Name" ng-model="form.registerUser.SurName" required>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2">Email*</label>
+				  <div class="col-sm-10">
+					<input type="email" class="form-control" name="email" placeholder="Enter Email" ng-model="form.registerUser.email">
+					<span ng-show="registerForm.email.$error.email" style="color: red">Please Enter Valid email address</span>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2">Mobile Number</label>
+				  <div class="col-sm-10">
+					<input type="text" class="form-control" name="mobile" placeholder="Enter Mobile Number" ng-model="form.registerUser.mobile" ng-pattern="/^\+?\(?\d{2,4}\)?[\d\s-]{3,}$/">
+					<span ng-show="registerForm.mobile.$invalid" style="color: red">Please Enter Valid Mobile Number</span>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2">Password*</label>
+				  <div class="col-sm-10">
+					<input type="password" class="form-control" name="password" placeholder="Enter Password" ng-model="form.registerUser.password" ng-minlength="4" required>
+					<span ng-show="registerForm.password.$error.minlength" style="color: red">Your password must be at least 4 characters.</span>
+				  </div>
+				</div>
+				<div class="form-group">
+				  <div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default" ng-disabled="registerForm.$invalid">Create Account</button>
+				  </div>
+				</div>
+			</form>
+		</div>
+		</div>
+		</div>
+	</div>
+</body>

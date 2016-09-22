@@ -1,0 +1,29 @@
+{
+	"type": "UserCollection",
+	"properties": {
+		"firstname": {
+			"name": "firstname",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "firstname",
+			"order": 0
+		},
+		"lastname": {
+			"name": "lastname",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "lastname",
+			"order": 1
+		},
+		"displayname": {
+			"name": "displayname",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "displayname",
+			"order": 2
+		}
+	}
+}
