@@ -216,3 +216,7 @@ footer .footer-main {
     padding-right: 15px;
     padding-bottom: 20px;
 }
+.download-links {
+    padding: 15px;
+    text-align: center;
+}

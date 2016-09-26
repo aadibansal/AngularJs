@@ -1,0 +1,72 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="height:55px">
+   <div class="container">
+      <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+         <span class="sr-only">Toggle navigation</span>
+         <i class="icon-menu"></i> Menu
+         </button>
+         <a class="navbar-brand" href="#!/">My Bootstrap</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <Header></Header>
+         <ul class="nav navbar-nav navbar-right" style="margin-top: 9px">
+            <li>
+               <h4 style="margin-top: 8px; margin-right:10px">Welcome {{dispName}}</h4>
+            </li>
+            <li>
+               <input type="text" class="form-control" name="srch-term" id="srch-term" placeholder="Search Themes" ng-model="search">
+            </li>
+            <li>
+               <button type="button" style="margin-left: 4px"class="btn btn-primary" ng-click="logOut()">LogOut</button>
+            </li>
+         </ul>
+      </div>
+   </div>
+</nav>
+<div class="container" id="detailShow">
+   <ol class="breadcrumb">
+      <li><a href="#!/bootstrap">MyBootstrap</a></li>
+      <li class="active">{{objData.name}}</li>
+   </ol>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-7">
+<div class="overview-panel">
+<img ng-src="{{objData.imgPath}}" class="img-responsive" >
+<div class="download-links">
+<ul class="list-inline">
+<li>
+<paypal-button business="gliolivi@portovenere.biz" language-code="en_US" currency-code="EUR" item-name="Reservation at B&B Gli Olivi in Portovenere - Check-in: 2 April 2015, Check-out: 4 April 2015" amount="90" ></paypal-button>
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+<div class="col-md-5">
+<div class="well">
+<h3>Need Help?</h3>
+ 
+<p>Feeling stuck? Need something more? You can to help you with your project or to create a custom build of any theme!</p>
+</div>
+<div class="well">
+<h3>Description:</h3>
+<p>{{objData.name}} is a Bootstrap app landing page theme to help you beautifully showcase your web app or anything else! This theme features a bold, colorful design with various content sections that will be an excellent boilerplate for yoru next Bootstrap based project!</p>
+</div>
+<div class="well">
+<h3>Features:</h3>
+<ul>
+<li>Fully responsive</li>
+<li>Easy to use HTML5/CSS Device mockups, just drop in content, no Photoshop or image editing necessary!</li>
+<li>Custom fixed navigation menu with scrolling animations</li>
+<li>LESS files included for deeper customization options</li>
+<li>Semantic markup with nav, sections, and asides</li>
+<li>Custom button style</li>
+<li>CSS gradient with texture overlay in the header</li>
+<li>Bold, colorful, stylish design</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
